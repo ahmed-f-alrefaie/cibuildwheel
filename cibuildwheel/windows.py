@@ -170,7 +170,7 @@ def setup_python(python_configuration: PythonConfiguration, dependency_constrain
 
     call(['python', '-m', 'pip', 'install', '--upgrade', 'pip', *dependency_constraint_flags], env=env)
     call(['pip', '--version'], env=env)
-    call(['pip', 'install', '--upgrade', 'setuptools', 'wheel', *dependency_constraint_flags], env=env)
+    call(['pip', 'install', '--upgrade', 'setuptools', 'wheel','delvewheel', *dependency_constraint_flags], env=env)
 
     return env
 
